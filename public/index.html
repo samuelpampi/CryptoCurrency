@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcultator</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/8edc7916a1.js" crossorigin="anonymous"></script>
+    
+</head>
+<body class="container-fluid d-flex flex-column align-items-center justify-content-center bg-light m-0 p-0">
+    <main class="container d-flex flex-column flex-xl-row bg-light align-items-center justify-content-center gap-5 py-4">    
+        <!-- Title section -->
+        <section id="title-section" class="d-flex flex-column">
+            <h2 class="text-start fw-bold m-0">Crypto</h2>
+            <h3 class="text-end fw-semibold m-0">Calculator</h3>
+            <h4 class="text-center fw-light m-0">by Samuel</h4>
+        </section>
+
+        <div id="line" class="d-none d-xl-block mx-5"></div>
+
+        <!-- Calculator section -->
+        <section id="calculator-section" class="container-fluid d-flex flex-column m-0 align-items-center justify-content-between">
+            <!-- Fortmulario de recogida de datos -->
+            <form class="container-fluid d-flex flex-column align-items-center justify-content-between gap-3">                
+                <!-- Input de cantidad -->                
+                <div id="cantidad-container">
+                    <label id="lb-cantidad" for="cantidad" class="form-label fs-5">Cantidad</label>
+                    <div id="input-cantidad" class="d-flex">
+                        <input type="number" name="cantidad" id="cantidad" value="100" min="1" class="form-control fw-semibold fs-3">
+                        <div class="d-flex flex-column align-items-end justify-content-between ms-2">
+                            <button class="btn btn-outline-secondary btn-sm p-0 inc" onclick=""><i class="fa-solid fa-plus"></i></button>
+                            <button class="btn btn-outline-secondary btn-sm p-0 inc" onclick=""><i class="fa-solid fa-minus"></i></button>
+                        </div>
+                    </div>                    
+                </div>
+
+                <!-- Selector principal de la calculadora-->
+                <div id="selector-container" class="container d-flex flex-column align-items-center border rounded-3 p-2">
+
+                    <!-- Selector de criptomoneda -->
+                    <div id="select-coin" class="p-3 container border rounded-3 bg-light">
+                        <label for="crypto" class="form-label fs-5">Select Coin</label>
+                        <div class="d-flex align-items-center fs-4 fw-bold">
+                            <img width="60px" height="60px" class="rounded-circle object-fit-cover me-3" id="crypto-logo" src="https:\/\/raw.githubusercontent.com\/ErikThiart\/cryptocurrency-icons\/master\/64\/bitcoin.png" alt="cripto logo">
+                            <span id="crype-name" class="me-auto">Bitcoin</span>
+                            <select name="crypto" id="select-crypto" class="fw-light p-2 border-0 bg-light">
+                                <option value="BTC">BTC</option>
+                            </select>
+                        </div>                        
+                    </div>
+
+                    <!-- Icono cambiar orden-->
+                    <div id="change" class="text-center my-2 fs-2"><i class="fa-solid fa-rotate"></i></div>
+
+                    <!-- Selector de Divisa -->
+                    <div id=select-currency class="p-3 container border rounded-3 bg-light">
+                        <label for="currency" class="form-label fs-5">Select Currency</label>
+                        <div class="d-flex align-items-center fs-4 fw-bold">
+                            <img width="60px" height="60px" class="object-fit-cover rounded-circle me-3" id="country-logo" src="https://flagcdn.com/h60/us.png" alt="country logo" >
+                            <span id="currency-name" class="me-auto">US Dollar</span>
+                            <select name="currency" id="select-currency" class="fw-light p-2 border-0 bg-light">
+                                <option value="USD">USD</option>
+                            </select>
+                        </div>                        
+                    </div>
+                </div>
+
+                <input type="button" value="Calculate" id="calculate" class="btn btn-lg px-5 mt-5 fs-5 fw-light">                
+            </form>    
+
+            <!-- Resultado de la operación -->
+            <p id="result" class="fs-4 fw-light text-center mt-2"> 100 BTC = $6,852,278</p>               
+            
+        </section>
+    </main>
+    <footer class="container-fluid text-center fs-5 fw-light p-3 sticky-bottom">
+        <p class="p-0 m-0">Mastermind project</p>
+    </footer>
+</body>
+</html>
