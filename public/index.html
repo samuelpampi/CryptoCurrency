@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,8 +35,8 @@
                     <div id="input-cantidad" class="d-flex">
                         <input type="number" name="cantidad" id="cantidad" value="100" min="1" class="form-control fw-semibold fs-3">
                         <div class="d-flex flex-column align-items-end justify-content-between ms-2">
-                            <button class="btn btn-outline-secondary btn-sm p-0 inc" onclick=""><i class="fa-solid fa-plus"></i></button>
-                            <button class="btn btn-outline-secondary btn-sm p-0 inc" onclick=""><i class="fa-solid fa-minus"></i></button>
+                            <button id="btn_inc" class="btn btn-outline-secondary btn-sm p-0 inc" onclick=""><i class="fa-solid fa-plus"></i></button>
+                            <button id="btn_dec" class="btn btn-outline-secondary btn-sm p-0 inc" onclick=""><i class="fa-solid fa-minus"></i></button>
                         </div>
                     </div>                    
                 </div>
@@ -45,7 +45,7 @@
                 <div id="selector-container" class="container d-flex flex-column align-items-center border rounded-3 p-2">
 
                     <!-- Selector de criptomoneda -->
-                    <div id="select-coin" class="p-3 container border rounded-3 bg-light">
+                    <div id="select-coin" class="order-1 p-3 container border rounded-3 bg-light">
                         <label for="crypto" class="form-label fs-5">Select Coin</label>
                         <div class="d-flex align-items-center fs-4 fw-bold">
                             <img width="60px" height="60px" class="rounded-circle object-fit-cover me-3" id="crypto-logo" src="https:\/\/raw.githubusercontent.com\/ErikThiart\/cryptocurrency-icons\/master\/64\/bitcoin.png" alt="cripto logo">
@@ -57,10 +57,10 @@
                     </div>
 
                     <!-- Icono cambiar orden-->
-                    <div id="change" class="text-center my-2 fs-2"><i class="fa-solid fa-rotate"></i></div>
+                    <div id="change" class="order-2 text-center my-2 fs-2"><i class="fa-solid fa-rotate"></i></div>
 
                     <!-- Selector de Divisa -->
-                    <div id=select-moneda class="p-3 container border rounded-3 bg-light">
+                    <div id=select-moneda class="order-3 p-3 container border rounded-3 bg-light">
                         <label for="currency" class="form-label fs-5">Select Currency</label>
                         <div class="d-flex align-items-center fs-4 fw-bold">
                             <img width="60px" height="60px" class="object-fit-cover rounded-circle me-3" id="country-logo" src="https://flagcdn.com/h60/us.png" alt="country logo" >
@@ -76,7 +76,7 @@
             </form>    
 
             <!-- Resultado de la operación -->
-            <p id="result" class="fs-4 fw-light text-center mt-2"> 100 BTC = $6,852,278</p>               
+            <p id="result" class="fs-4 fw-light text-center mt-2"></p>               
             
         </section>
     </main>

@@ -98,9 +98,28 @@ select{
     background-repeat: no-repeat;
     background-position: right 0.7rem top 50%;
     background-size: 0.65rem auto;
+    cursor: pointer;
 }
 
 #calculate{
     color: black;
     background-color: #d4db00;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+        scale: 1.1;
+        background-color: #bdc300;
+        cursor: pointer;
+    }
 }
+
+#change{
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        transform: rotate(180deg);
+        cursor: pointer;
+    }
+}
+
+
